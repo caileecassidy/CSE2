@@ -2,6 +2,8 @@
 //Cailee Cassidy
 //CSE 002 HW02
 //Due September 9th, 2014
+//This will calculate the cost of a transaction, both before
+//and after taxes
 
 public class Arithmetic {
     public static void main (String[] args) {
