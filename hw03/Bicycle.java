@@ -3,7 +3,11 @@
 //CSE 002 HW 03
 //Due 9/16/14
 //Practice in writing code that allows user to input data, 
-//practice in performing arithmetic operations
+//practice in performing arithmetic operations. This program
+//asks the user to input the number of counts on a cyclometer
+//and the number of seconds that occurred during those counts, 
+//and then spits out how far they traveled, how long it took,
+//and what their average speed was.
 import java.util.Scanner;
 public class Bicycle {
     public static void main(String[] args) {
