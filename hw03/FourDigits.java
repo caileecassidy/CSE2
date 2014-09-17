@@ -26,10 +26,10 @@ public class FourDigits {
         int noMoreDecimalsTwo = (int)(secondNumberChosen *10000);
         //No decimals, we have to get rid of all original numbers before
         //the decimal, but this time we want to round up not down
-        int digitOne = (int)(noMoreDecimalsTwo % 10);
-        int digitTwo = (int)(noMoreDecimalsTwo % 100);
-        int digitThree = (int)(noMoreDecimalsTwo % 1000);
-        int digitFour = (int)(noMoreDecimalsTwo % 10000);
-        System.out.println("The four digits are "+digitOne digitTwo digitThree digitFour);
+        int digitOne = (int)(noMoreDecimalsTwo % 1);
+        int digitTwo = (int)(noMoreDecimalsTwo % 1000)/100;
+        int digitThree = (int)(noMoreDecimalsTwo % 100)/10;
+        int digitFour = (int)(noMoreDecimalsTwo % 10)/1;
+        System.out.println("The four digits are " + digitOne + digitTwo + digitThree + digitFour);
     }
 }
