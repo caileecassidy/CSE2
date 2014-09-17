@@ -27,7 +27,7 @@ public class Root {
         double fourthGuess = (2*thirdGuess*thirdGuess*thirdGuess + chosenNumber)/(3*thirdGuess*thirdGuess);
         System.out.println("The cube root is "+fourthGuess);
         //Resquare the value to get
-        double squaredValue = fourthGuess*fourthGuess*fourthGuess;
-        System.out.println("The cube root cubed is "+squaredValue);
+        double cubedValue = fourthGuess*fourthGuess*fourthGuess;
+        System.out.println("The cube root cubed is "+cubedValue);
     }
 }
