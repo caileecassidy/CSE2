@@ -24,10 +24,6 @@ public class Month {
         System.out.println("Enter an int giving the number of the month (1-12) -");
         int month = myScanner.nextInt();
         
-        //THIS IS WHERE THE PROBLEM STARTS!!! how do i check to make sure
-        //that it's an integer?? Or since we declared the scanner as nextInt
-        //do we not need this part??
-        
         //if they select January    
         if(month == 1) 
         {
