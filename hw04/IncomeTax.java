@@ -24,32 +24,36 @@ public class IncomeTax {
         
         //Compute tax
         
-        double tax = 0;
-        double taxRate = 0;
-        
-        if(myScanner.hasNextInt()) 
         {
-            if (income >= 78) 
+            if(income >= 78) 
             {
-                tax = (income * 1000) * 0.14;
-                taxRate = 14;
+                double tax1 = (income * 1000) * 0.14;
+                double taxRate1 = 14;
+                System.out.println("The tax rate on $"+income+",000 is "+taxRate1+
+                "%, and the tax is $"+(tax1 * 100)/100.0);
             }
-            else if (income >= 40) 
+            else if(income >= 40) 
             {
-                tax = (income * 1000) * 0.12;
-                taxRate = 12;
+                double tax2 = (income * 1000) * 0.12;
+                double taxRate2 = 12;
+                System.out.println("The tax rate on $"+income+",000 is "+taxRate2+
+                "%, and the tax is $"+(tax2 * 100)/100.0);
             }
-            else if (income >= 20) 
+            else if(income >= 20) 
             {
-                tax = (income * 1000) * 0.07;
-                taxRate = 7;
+                double tax3 = (income * 1000) * 0.07;
+                double taxRate3 = 7;
+                System.out.println("The tax rate on $"+income+",000 is "+taxRate3+
+                "%, and the tax is $"+(tax3 * 100)/100.0);
             }
-            else if (income >= 0) 
+            else if(income >= 0) 
             { 
-                tax = (income * 1000) * 0.05;
-                taxRate = 5;
+                double tax4 = (income * 1000) * 0.05;
+                double taxRate4 = 5;
+                System.out.println("The tax rate on $"+income+",000 is "+taxRate4+
+                "%, and the tax is $"+(tax4 * 100)/100.0);
             }
-            else if ((income * 10) % 10) != 0;
+            else if(income * 10 % 10 != 0)
             {
                 System.out.println("You did not enter an int");
             }
@@ -57,7 +61,6 @@ public class IncomeTax {
             {
                 System.out.println("You did not enter a positive int");
             }
-        System.out.println("The tax rate on $"+income+",000 is "+taxRate+"%, and the tax is $"+tax*100/100.0);
         }
     }
 }
