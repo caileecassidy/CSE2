@@ -57,9 +57,13 @@ public class IncomeTax {
             {
                 System.out.println("You did not enter an int");
             }
-            else 
+            else if(income <0)
             {
                 System.out.println("You did not enter a positive int");
+            }
+            else 
+            {
+                System.out.println("Youd id not enter a positive int");
             }
         }
     }
