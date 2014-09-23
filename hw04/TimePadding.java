@@ -39,7 +39,11 @@ public class TimePadding {
         {
             System.out.println("Entry invalid. Enter a number between 0 and 86399.");
         }
-        else 
+        else if(secondsIn * 10 % 10 != 0)
+        {
+            System.out.println("Enry invalid. Enter an integer between 0 and 86399.");
+        }
+        else
         {
             System.out.println("The time is "+hoursOut+":"+minutesOut+":"+secondsOut+".");
         }
