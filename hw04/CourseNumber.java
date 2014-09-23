@@ -26,5 +26,46 @@ public class CourseNumber {
         int courseSemester = myScanner.nextInt();
         
         //See if the number they entered was appropriate
+        
+        //First, declare the variable for the year:
+        int year = courseSemester/100;
+        
+        //Next, check if the semester they entered was valid
+        //Last two digits being 10 gives spring semester
+        if(courseSemester % 100 == 10)
+        {
+            System.out.println("The course was offered in the Spring semester of "+year);
+        }
+        //Last two digits = 20 gives Summer 1 session
+        else if(courseSemester % 100 == 20)
+        {
+            System.out.println("The course was offered in the Summer 1 semester of "+year);
+        }
+        //Last two digits = 30 gives summer 2
+        else if(courseSemester % 100 == 30)
+        {
+            System.out.println("The course was offered in the Summer 2 semester of "+year);
+        }
+        //Last two digits = 40 gives fall
+        else if(courseSemester % 100 == 40)
+        {
+            System.out.println("The course was offered in the Fall semester of "+year);
+        }
+        //Make sure user can't enter a semester before spring 1865
+        else if(courseSemester < 186510)
+        {
+            System.out.println("The number was outside of the range [186510, 201440]");
+        }
+        //Make sure a user can't enter a semester after this one
+        else if(courseSemester > 201440)
+        {
+            System.out.println("The number was outside of the range [186510, 201440]");
+        }
+        //Make sure the user enters a legitimate smemester
+        else if((courseSemester % 100 != 10) || (courseSemester % 100 != 20) ||
+            (courseSemester % 100 != 30) || (courseSemester % 100 != 40))
+        {
+            System.out.println((courseSemester%100)+" is not a legitimate semester");
+        }
     }
 }

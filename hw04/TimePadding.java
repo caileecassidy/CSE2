@@ -17,11 +17,31 @@ import java.util.Scanner;
 public class TimePadding {
     //Define main method
     public static void main(String[] args) {
-    //Create a scanner
-    Scanner myScanner = new Scanner(System.in);
+        //Create a scanner
+        Scanner myScanner = new Scanner(System.in);
     
-    //Have the user enter the time
-    System.out.println("Enter the time in seconds: ");
-    int seconds = myScanner.nextInt();
+        //Have the user enter the time
+        System.out.println("Enter the time in seconds: ");
+        int secondsIn = myScanner.nextInt();
+    
+        //The user now enters the time in seconds
+    
+        //To get the seconds value that we are going to spit out:
+        int secondsOut = secondsIn % 60;
+        int minutesOut = secondsIn / 60 % 60;
+        int hoursOut = secondsIn / 3600;
+    
+        if(secondsIn < 0)
+        {
+            System.out.println("Entry invalid. Enter a number between 0 and 86399.");
+        }
+        else if(secondsIn >= 86400)
+        {
+            System.out.println("Entry invalid. Enter a number between 0 and 86399.");
+        }
+        else 
+        {
+            System.out.println("The time is "+hoursOut+":"+minutesOut+":"+secondsOut+".");
+        }
     }
 }
