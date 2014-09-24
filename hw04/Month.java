@@ -84,7 +84,7 @@ public class Month {
         {
             System.out.println("Enter an int giving the year ");
             int year = myScanner.nextInt();
-            //If the year is divisible by 4, it was a leap year
+            //If the year is divisible by 4 but NOT 100, or by 400 it was a leap year
             if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) 
             {
                 System.out.println("The month has 29 days");

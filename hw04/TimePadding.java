@@ -30,6 +30,7 @@ public class TimePadding {
         int secondsOut = secondsIn % 60;
         int minutesOut = secondsIn / 60 % 60;
         int hoursOut = secondsIn / 3600;
+        
     
         if(secondsIn < 0)
         {
@@ -42,6 +43,19 @@ public class TimePadding {
         else if(secondsIn * 10 % 10 != 0)
         {
             System.out.println("Enry invalid. Enter an integer between 0 and 86399.");
+        }
+       
+        if(secondsOut < 10 && minutesOut < 10)
+        {
+            System.out.println("The time is "+hoursOut+":0"+minutesOut+":0"+secondsOut+".");
+        }
+        else if(secondsOut < 10)
+        {
+            System.out.println("The time is "+hoursOut+":"+minutesOut+":0"+secondsOut+".");
+        }
+        else if(minutesOut < 10)
+        {
+            System.out.println("The time is "+hoursOut+":0"+minutesOut+":"+secondsOut+".");
         }
         else
         {
