@@ -30,21 +30,25 @@ public class BigMacAgain {
         //as input based on a past assignment, but they need to be defined 
         //the same (in the scanner and when you're using it)
         
-        if(myScanner.hasNextInt()) {
+        if(myScanner.hasNextInt()) 
+        {
             System.out.println("You ordered "+numberBigMacs+" Big Macs for a cost of "
             +numberBigMacs+"x2.22 = $"+numberBigMacs*2.22);
         }
-        else {
+        else 
+        {
             System.out.println("You did not enter an int");
             return;     //leaves the program, i.e. program terminates
         }
         //Now validate whether that integer was greater than 0
         
-        if(myScanner.nextInt() > 0) {
+        if(myScanner.nextInt() > 0) 
+        {
             System.out.println("You ordered "+numberBigMacs+" Big Macs for a cost of "
             +numberBigMacs+"x2.22 = $"+numberBigMacs*2.22);
         }
-        else {
+        else 
+        {
             System.out.println("You did not enter an int > 0");
             return;     //program terminates
         }
@@ -55,14 +59,17 @@ public class BigMacAgain {
         String orderFries = myScanner.next();
         //INFO FOR ME: string.equals("String") 
         //Use double pipe (||) for or, not commas
-        double orderFriesAnswer 
-        if(orderFries.equals(("Y")||("y"))) {
+
+        if(orderFries == "Y" || orderFries == "y") 
+        {
             System.out.println("You ordered fries at a cost of $2.15");
         }
-        else if(orderFries.equals("N"))||(orderFries.equals("n")); {
-            
+        else if(orderFries == "N" || orderFries == "n") 
+        {
+           
         }
-        else {
+        else 
+        {
             System.out.println("You did not give a valid answer");
             return;     //program terminates
         }
