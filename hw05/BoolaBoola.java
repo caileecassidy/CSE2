@@ -27,6 +27,8 @@ public class BoolaBoola {
         boolean answer1;
         boolean finalAnswer;
         
+        //Now, use the Math.random function to randomly assign the first variable to be 
+        //true or false
         if(Math.random() > 0.5)
         {
             var1 = true;
@@ -35,6 +37,12 @@ public class BoolaBoola {
         {
             var1 = false;
         }
+        
+        //Next, assign the third variable to be true or false. Do this before the second
+        //variable so that, once variables one and three have been defined, we can use
+        //variable 2, the && or || statement, to determine whether the first part of the
+        //statement is true or false so we don't have to go through all 32 expressions
+        //manually
         
         if(Math.random() > 0.5)
         {
@@ -45,7 +53,8 @@ public class BoolaBoola {
             var3 = false;
         }
         
-         if(Math.random() > 0.5)
+        //determine the first boolean operator
+        if(Math.random() > 0.5)
         {
             var2 = "&&";
             answer1 = var1 && var3;
@@ -56,6 +65,8 @@ public class BoolaBoola {
             answer1 = var1 || var3;
         }
         
+        //declare variable 5 before variable 4 for the same reason we declared variable
+        //3 before variable 2
         if(Math.random() > 0.5)
         {
             var5 = true;
@@ -65,6 +76,8 @@ public class BoolaBoola {
             var5= false;
         }
         
+        //now see whether the whole statement is true or false based on the first part
+        //and the last variables
         if(Math.random() > 0.5)
         {
             var4 = "&&";
@@ -79,13 +92,17 @@ public class BoolaBoola {
         //Create a scanner
         Scanner myScanner = new Scanner(System.in);
         
+        //ask the user to input
         System.out.println("Does "+var1+" "+var2+" "+var3+" "+var4+" "+var5+
         " have the value true(t/T) or false(f/F)?");
         
         String answer = myScanner.next();
         
+        //declare the userAnswer variable
         boolean userAnswer = false;
         
+        //convert the userAnswer into a boolean so that java can read and compare
+        //automatically
         if(answer.equals("F")  || (answer.equals("f")))
         {
             userAnswer = false;
@@ -95,6 +112,7 @@ public class BoolaBoola {
             userAnswer = true;
         }
         
+        //tell the user whether the answer they entered was correct or not
         if(userAnswer == finalAnswer)
         {
             System.out.println("Correct");
