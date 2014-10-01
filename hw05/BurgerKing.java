@@ -26,12 +26,14 @@ public class BurgerKing {
         System.out.println("Fries (F or f)");
         String order = myScanner.next();
         
-            //If the customer orders a burger, offer them pssibilities of how they want it
+            
+            //First, make sure that they put in a single character
             if(order.length() != 1)
             {
                 System.out.println("a single character is expected");
             }
             
+            //If they select a burger, offer them different options of how they want a burger
             else if(order.equals("B") || (order.equals("b")))
             {
                 System.out.println("Enter A or a for \"all the fixins\"");
@@ -39,10 +41,12 @@ public class BurgerKing {
                 System.out.println("N or n for none of the above");
                 String burgerDetails = myScanner.next();
             
+                //Make sure they entered a single character when deciding about their burger
                 if(burgerDetails.length() != 1)
                 {
                     System.out.println("a single character is expected");
-                }            
+                }
+                //Now that that is verified, tell them what they ordered
                 else if(burgerDetails.equals("A") || (burgerDetails.equals("a")))
                 {
                     System.out.println("You ordered a burger with all the fixins");               
@@ -61,16 +65,20 @@ public class BurgerKing {
                     return;
                 }
             }
+            
+            //Now, if they picked soda, offer soda options
             else if(order.equals("S") || (order.equals("s")))
             {
                 System.out.println("Do you want Pepsi (p or P),");
                 System.out.println("Coke (c or C), Sprite (s or S), or Mountain Dew (M or m)");
                 String sodaDetails = myScanner.next();
                 
+                //Make sure they entered one character
                 if(sodaDetails.length() != 1)
                 {
                     System.out.println("a single character is expected");
                 }
+                //Now tell them what kind of soda they ordered
                 else if(sodaDetails.equals("P") || (sodaDetails.equals("p"))) 
                 {
                     System.out.println("You ordered a Pepsi");
@@ -92,15 +100,19 @@ public class BurgerKing {
                     System.out.println("You did not enter any of P, p, C, c, S, s, M, or m");
                 }
             }
+            
+            //Now give them the options if they ordered fries
             else if(order.equals("F") || (order.equals("f")))
             {
                 System.out.println("Do you want a large or small order of fries (l, L, s, or S)");
                 String friesDetails = myScanner.next();
             
+                //make sure that they only entered one digit
                 if(friesDetails.length() != 1)
                 {
                     System.out.println("a single character is expected");
                 }
+                //give them size options for their fries
                 else if(friesDetails.equals("L") || (friesDetails.equals("l")))
                 {
                     System.out.println("You ordered large fries");
