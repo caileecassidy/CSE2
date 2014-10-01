@@ -54,17 +54,17 @@ public class BigMacAgain {
         }
         //If user enters an integer > 0, ask if they want fries as well
         //INFO FOR ME: int=nextInt, double=nextDouble, string=next
-        
+
         System.out.println("Do you want an order of fries (Y/y/N/n)?");
         String orderFries = myScanner.next();
         //INFO FOR ME: string.equals("String") 
         //Use double pipe (||) for or, not commas
 
-        if(orderFries == "Y" || orderFries == "y") 
+        if(orderFries.equals('Y') || orderFries.equals('y')) 
         {
             System.out.println("You ordered fries at a cost of $2.15");
         }
-        else if(orderFries == "N" || orderFries == "n") 
+        else if(orderFries.equals('N') || orderFries.equals('n')) 
         {
            
         }
