@@ -18,14 +18,18 @@ public class Root {
         double x = scan.nextDouble();
         double low = 0;
         double high = (1 + x);
+        double difference = high - low;
         double middle = (low + high)/2;
-        if((middle * middle) > x)
+        while (difference < (0.0000001 * high))
         {
-            double newHigh = middle;
-        }
-        else
-        {
-           double newLow = middle; 
+            if((middle * middle) > x)
+            {
+                new high = middle;
+            }
+            else
+            {
+                new low = middle; 
+            }
         }
     }
 }
