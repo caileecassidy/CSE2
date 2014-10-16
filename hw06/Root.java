@@ -12,24 +12,29 @@ import java.util.Scanner;
 public class Root {
     
     public static void main(String[] args) {
-        //declare variables
+        
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a double");
-        double x = scan.nextDouble();
-        double low = 0;
-        double high = (1 + x);
-        double difference = high - low;
-        double middle = (low + high)/2;
-        while (difference < (0.0000001 * high))
+        //declare variables
+        double x = scan.nextDouble(); //x is the number user enters
+        double low = 0; //initialize the low off at 0, as stated
+        double high = (1 + x); //initialize the high at the number they entered +1, as stated
+        double middle = 0; //initalize middle
+        while ((high-low) > (0.0000001 * (1+x)))
         {
+            middle = (low + high)/2;
             if((middle * middle) > x)
             {
-                new high = middle;
+                high = middle;
             }
             else
             {
-                new low = middle; 
+                low = middle; 
             }
         }
+        //print the square root after all conditions have been met (the last high while
+        //the while loop is still running under the stated condition will be the answer you
+        //want)
+        System.out.println("The square root is "+high+".");
     }
 }
