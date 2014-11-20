@@ -3,14 +3,27 @@ public class Practice
 {
     public static void main(String[] args)
     {
-       System.out.println("[START]");
-       for( int i = 1; i <=5; i++)
-       {
-           for( int j = 1; j<=i; j+=i)
-           {
-               System.out.println("["+i+"]");
-           }
-       }
-       System.out.println("[END]");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please...");
+        int input = scan.nextInt();
+        while(input < 0 || input > 7)
+        {
+            System.out.println("Not a day");
+            input = scan.nextInt();
+        }
+        while(input == 0)
+        {
+            break;
+        }
+        convertToDay(input);
+    }
+    public static int convertToDay(int input)
+    {
+        switch(input)
+        {
+            case(1): System.out.println("Monday"); break;
+            case(2): System.out.println("Tuesday"); break;
+        }
+        return input;
     }
 }
