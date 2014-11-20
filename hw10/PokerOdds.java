@@ -16,16 +16,59 @@ public class PokerOdds
     public static void main(String [] arg) 
     {
         showHands();
-        simulateOdds();
+        //simulateOdds();
     }
-}
 
-public static void showHands()
-{
-    Random random = new Random();
-    int[] cards = new int[52];
-    for(int i = 0; i < cards.length; i++)
+    public static void showHands()
     {
-        cards[i] = i; 
+        Random chooseRandom = new Random();
+        int[] cards = new int[52];
+        for(int i = 0; i < cards.length; i++)
+        {
+            cards[i] = i; 
+        }
+        
+        int[] hand = new int[5];
+        for(int i = 0; i < hand.length; i++)
+        {
+            hand[i] = -1;
+        }
+        
+        for(int i = 1; i < 6; i++)
+        {
+            int card = chooseRandom.nextInt(52 - i);
+            hand[i - 1] = card;
+            cards[card] = cards[cards.length - i];
+            cards[cards.length - i] = -1;
+        }
+        
+        switch(card % 13)
+        {
+            String rank = " ";
+            case 0: rank = "A"; break;
+            case 1: rank = "K"; break;
+            case 2: rank = "Q"; break;
+            case 3: rank = "J"; break;
+            case 4: rank = "10"; break;
+            case 5: rank = "9"; break;
+            case 6: rank = "8"; break;
+            case 7: rank = "7"; break;
+            case 8: rank = "6"; break;
+            case 9: rank = "5"; break;
+            case 10: rank = "4"; break;
+            case 11: rank = "3"; break;
+            case 12: rank = "2"; break;
+        }
+        
+        String [] labels = new String[5];
+        
+        
+        //String labels [] = {"Clubs: ", "Diamonds: ", "Hearts: ",
+          //"Spades: ");
+        //for(int i = 0; i < 4; i++)
+        //
+        //{
+          //System.out.println(labels[i] + )
+        //} 
     }
 }
