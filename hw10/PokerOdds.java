@@ -21,54 +21,49 @@ public class PokerOdds
 
     public static void showHands()
     {
-        Random chooseRandom = new Random();
-        int[] cards = new int[52];
-        for(int i = 0; i < cards.length; i++)
+        Scanner scan = new Scanner(System.in);
+        String answer = "";
+        do
         {
-            cards[i] = i; 
-        }
-        
-        int[] hand = new int[5];
-        for(int i = 0; i < hand.length; i++)
-        {
-            hand[i] = -1;
-        }
-        
-        for(int i = 1; i < 6; i++)
-        {
-            int card = chooseRandom.nextInt(52 - i);
-            hand[i - 1] = card;
-            cards[card] = cards[cards.length - i];
-            cards[cards.length - i] = -1;
-        }
-        
-        switch(card % 13)
-        {
-            String rank = " ";
-            case 0: rank = "A"; break;
-            case 1: rank = "K"; break;
-            case 2: rank = "Q"; break;
-            case 3: rank = "J"; break;
-            case 4: rank = "10"; break;
-            case 5: rank = "9"; break;
-            case 6: rank = "8"; break;
-            case 7: rank = "7"; break;
-            case 8: rank = "6"; break;
-            case 9: rank = "5"; break;
-            case 10: rank = "4"; break;
-            case 11: rank = "3"; break;
-            case 12: rank = "2"; break;
-        }
-        
-        String [] labels = new String[5];
-        
-        
-        //String labels [] = {"Clubs: ", "Diamonds: ", "Hearts: ",
-          //"Spades: ");
-        //for(int i = 0; i < 4; i++)
-        //
-        //{
-          //System.out.println(labels[i] + )
-        //} 
+            Random chooseRandom = new Random();
+            int[] cards = new int[52];
+            String suits [] = {"Clubs: ", "Diamonds: ", "Hearts: ",
+              "Spades: "};
+            String ranks [] = {"A", "K", "Q", "J", "10", "9", "8", "7", "6",
+              "5", "4", "3", "2"};
+            
+            
+            for(int i = 0; i < cards.length; i++)
+            {
+                cards[i] = i; 
+            }
+            
+            int[] hand = new int[5];
+            for(int i = 0; i < hand.length; i++)
+            {
+                hand[i] = -1;
+            }
+            
+            for(int i = 1; i < 6; i++)
+            {
+                int card = chooseRandom.nextInt(52 - i);
+                hand[i - 1] = card;
+                cards[card] = cards[cards.length - i];
+                cards[cards.length - i] = -1;
+                String suit = suits[cards[i] / 13];
+                String rank = ranks[cards[i] % 13];
+            
+                System.out.println(suits[0]+rank[suits[0]]);
+                System.out.println(suits[1]+rank[suits[1]]);
+                System.out.println(suits[2]+rank[suits[2]]);
+                System.out.println(suits[3]+rank[suits[3]]);
+            }
+            System.out.println();
+            System.out.println();
+            System.out.println("Go again? Enter 'y' or 'Y', anything else to quit");
+            
+            answer = scan.next();
+            
+        } while(answer.equals("Y")||answer.equals("y"));
     }
 }
