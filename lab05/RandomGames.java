@@ -26,7 +26,7 @@ public class RandomGames
         }
         else
         {
-            rouletteResults = (rouletteDraw + " ");
+            rouletteResults = (rouletteDraw + "");
         }
         
         if(choice.length() > 1)
