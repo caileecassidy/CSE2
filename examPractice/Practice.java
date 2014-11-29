@@ -4,26 +4,16 @@ public class Practice
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Please...");
-        int input = scan.nextInt();
-        while(input < 0 || input > 7)
+        int sum = 0;
+        int[][] array A = new int[2][5]
+        for(int i = 0; i < A.length; i++)
         {
-            System.out.println("Not a day");
-            input = scan.nextInt();
+            for(int j = 0; j < A[i].length; j++)
+            {
+                A[i][j] = 3;
+            }
+            System.out.println("sum is " + sum);
         }
-        while(input == 0)
-        {
-            break;
-        }
-        convertToDay(input);
-    }
-    public static int convertToDay(int input)
-    {
-        switch(input)
-        {
-            case(1): System.out.println("Monday"); break;
-            case(2): System.out.println("Tuesday"); break;
-        }
-        return input;
+        sum = 0;
     }
 }
