@@ -13,10 +13,54 @@ public class LoopTheLoop {
     //main method
     public static void main(String[] args) {
         
-        //Create a scanner
-        Scanner scan = new Scanner(System.in);
-        
-        //Define variable
         int nStars = 10;
+        boolean goAgain = true;
+        do
+        {
+            System.out.println("Enter an int between 1 and 15 - ");        
+            //Create a scanner
+            Scanner scan = new Scanner(System.in);
+            
+            if(scan.hasNextInt())
+            {
+                nStars = scan.nextInt();
+            }
+            else
+            {
+                return;
+            }
+            
+            if(nStars < 1 || nStars > 15)
+            {
+                System.out.println("Your int was not in the range [1.15]");
+                return;
+            }
+        
+            for(int i = 0; i < nStars; i++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+            
+            for(int i = 0; i < nStars; i++)
+            {
+                for(int j = 0; j <= i; j++)
+                {
+                    System.out.print("*");   
+                }
+                System.out.println();
+            }
+            
+            System.out.println("Enter y or Y to go again - ");
+            String answer = scan.next();
+            if(answer.equals('y') || answer.equals('Y'))
+            {
+                 goAgain = true;
+            }
+            else
+            {
+                goAgain = false;
+            }
+        } while(goAgain = true);
     }
 }
