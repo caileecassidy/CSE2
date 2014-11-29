@@ -21,22 +21,23 @@ public class Enigma0 {
     Scanner scan = new Scanner(System.in);
     
     System.out.print("Enter an int- ");
+    
 
     
     if(scan.hasNextInt())
     {
         int n=scan.nextInt();
       System.out.println("You entered "+n);
-      System.out.println("Please enter a second int- ");
+      System.out.println("Enter a second int - ");
     }
     else
     {
       int n=4;
       System.out.println("You entered "+n);
-      System.out.println("Please enter a second int- ");
+      System.out.println("Enter a second int - ");
     }
     
-    int k=4,p=6,q=7,r=8,n=scan.nextInt();
+    int k=4, p=6, q=7, r=8, n = scan.nextInt();
     switch(k+p+q+r){
       case 24: 
       case 25: System.out.println("sum is 25");
