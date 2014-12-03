@@ -82,7 +82,7 @@ public class ArrayMath
         
         if(x.length < y.length)
         {
-            double[] z = new double[y.length];
+
             for(int i = 0; i < x.length; i++)
             {
                 newX[i] = x[i];
@@ -100,7 +100,7 @@ public class ArrayMath
         
         if(y.length < x.length)
         {
-            double[] z = new double[x.length];
+
             for(int i = 0; i < y.length; i++)
             {
                 newY[i] = y[i];
