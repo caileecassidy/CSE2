@@ -20,18 +20,18 @@ public class MoreLoops
         }*/
         
         //CODE 1
-        /*System.out.print("Enter an int - ");
-
-        if(!scan.hasNextInt());
+        System.out.print("Enter an int - ");
+        
+        if(!n.hasNextInt());
         {
             do
             {
                 System.out.print("You did not enter an int; try again - ");
                 scan.next();
             } while(!scan.hasNextInt());
-        }*/
+        }
         
-        //n = scan.nextInt();
+        n = scan.nextInt();
         
         /*for(int j = 0; j < n && j < 40; j++)
         {
@@ -43,7 +43,7 @@ public class MoreLoops
         }*/
         
         //CODE 2
-        /*int j = 0;
+        int j = 0;
         while(j < n && j < 40)
         {
             int k = 0;
@@ -54,9 +54,9 @@ public class MoreLoops
             }
             System.out.println();
             j++;
-        }*/
+        }
         
-        //int k = 4;
+        int k = 4;
         
         /*do
         {
@@ -65,13 +65,13 @@ public class MoreLoops
         } while(k < 4); */
         
         //CODE 3
-        /*while(k<=4)
+        while(k<=4)
         {
             System.out.println("k = "+k);
             k++;
-        }*/
+        }
         
-        int count = 0;
+        /*int count = 0;
         while(true)
         {
             switch(n)
@@ -86,6 +86,43 @@ public class MoreLoops
             count++;
             if(count < 10)
               break;
+        }*/
+        
+        //CODE 4
+        
+        for(k = 4; k <=4; k++)
+        {
+            System.out.println("k="+k);
+        }
+        
+        for(int count = 0; count < 10; count++)
+        {
+            if(n == 2)
+            {
+                System.out.println("Case 2 ");
+                continue;
+            }
+            
+            else if(n == 3)
+            {
+                break;
+            }
+            
+            else if(n == 4)
+            {
+                System.out.println("Case 4");
+            }
+            
+            else if(n == 5)
+            {
+                System.out.println("Case 5");
+                break;
+            }
+            else
+            {
+                System.out.println(n+ " is > 5 or < 1");
+                break;
+            }
         }
     }
 }
