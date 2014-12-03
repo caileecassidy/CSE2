@@ -14,8 +14,8 @@ public class LoopTheLoop {
     public static void main(String[] args) {
         
         int nStars = 10;
-        boolean goAgain = true;
-        do
+
+        while(true)
         {
             System.out.println("Enter an int between 1 and 15 - ");        
             //Create a scanner
@@ -53,14 +53,12 @@ public class LoopTheLoop {
             
             System.out.println("Enter y or Y to go again - ");
             String answer = scan.next();
-            if(answer.equals('y') || answer.equals('Y'))
+            if(answer.equals("y") || answer.equals("Y"))
             {
-                 goAgain = true;
+                 continue;
             }
             else
-            {
-                goAgain = false;
-            }
-        } while(goAgain = true);
+                 break;
+        } 
     }
 }
