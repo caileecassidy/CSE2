@@ -20,4 +20,29 @@ public class MatrixSorter {
         sort(mat3d[2]);
         show(mat3d);
     }
+    
+    public static int[][][] buildMat3d()
+    {
+        int[][][] mat3d = new int[3][][];
+        mat3d[0] = new int[3][5];
+        mat3d[1] = new int[5][8];
+        mat3d[2] = new int[7][11];
+        return mat3d;
+    }
+    
+    public static int[][] show(int x[][][])
+    {
+        int[][] mat2d = new int[2][2]; //placeholder
+        return mat2d;     //placeholder
+    }
+    
+    public static int findMin(int x[][][])
+    {
+        return 7;   //placeholder 
+    }
+    
+    public static int[][] sort(int x[][])
+    {
+        return x;  //placeholder  
+    }
 }

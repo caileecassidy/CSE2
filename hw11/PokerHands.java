@@ -36,7 +36,7 @@ public class PokerHands
                 }
                 else
                 {
-                    //hand[suit];
+                    //hand(suit);
                 }
                 System.out.println("Enter one of 'a', 'k', 'q', 'j', '10',...'2' - ");
                 String face = scan.next();
@@ -48,7 +48,7 @@ public class PokerHands
                 }
                 else
                 {
-                    //hand[face];
+                    //hand(face);
                 }
                    
             }
