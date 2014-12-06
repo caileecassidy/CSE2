@@ -19,11 +19,11 @@ public class ArrayMath
         w[] = {2.3, 13, 14, 12},
         v[], 
         u[] = {2.3, 12, 14};
-        //v = addArrays(x,y);
-        //System.out.println(display(x)+"\n + " + display(y) +
-        //"\n = " + display(v));
-        //System.out.println(display(x) + "\n + " + display(z) +
-        //"\n = " + display(addArrays(x,z)));
+        v = addArrays(x,y);
+        System.out.println(display(x)+"\n + " + display(y) +
+        "\n = " + display(v));
+        System.out.println(display(x) + "\n + " + display(z) +
+        "\n = " + display(addArrays(x,z)));
         System.out.println("It is " + equals(x,y)+" that " +display(x) +
         " == " + display(y));
         System.out.println("It is " + equals(z,w) + " that " + display(z) +
@@ -66,9 +66,9 @@ public class ArrayMath
         return true;
     }
     
-    public static double addArrays(double[] x, double[] y)
+    public static double[] addArrays(double[] x, double[] y)
     {
-        double[] z = new double[];
+        double[] z = new double[x.length];
         double[] newX = new double[y.length];
         double[] newY = new double[x.length];
         

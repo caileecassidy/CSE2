@@ -22,7 +22,7 @@ public class MoreLoops
         //CODE 1
         System.out.print("Enter an int - ");
         
-        if(!n.hasNextInt());
+        if(!scan.hasNextInt())
         {
             do
             {

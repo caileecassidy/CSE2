@@ -24,8 +24,13 @@ public class Methods
         System.out.println("The larger of "+a+" and "+b+" is "+larger(a,b));
         System.out.println("The larger of "+a+", "+b+", and "+c+
             " is "+(larger(a, larger(b,c))));
-        //System.out.println("It is "+ascending(a,b,c)+" that "+a+", "+b+
-            //", and "+c+" are in ascending order");
+        System.out.println("It is "+ascending(a,b,c)+" that "+a+", "+b+
+            ", and "+c+" are in ascending order");
+    }
+    
+    public static int getInt(Scanner scan)
+    {
+        return scan.nextInt();
     }
     
     public static int larger(int a, int b)
@@ -40,52 +45,36 @@ public class Methods
         }
     }
     
-    /*public static int ascending(int a, int b, int c)
+    public static boolean ascending(int a, int b, int c)
     {
         int temp = 0;
-        while(a > b && a > c)
+        
+        while(b < a)
         {
-            if(c > b)
-            {
-                temp = b;
-                b = c;
-                c = temp;
-            }
+            return false; 
         }
         
-        while(b > a && b > c)
+        while(c < a)
         {
-            if(c > a)
+            return false;
+        }
+         
+        while(c < b)
+        {
+            return false;
+        }
+        
+        while(a < b && a < c)
+        {
+            if(b > c)
             {
-                temp = a;
-                a = b;
-                b = c;
-                c = temp;
+                return false;
             }
             else
             {
-                temp = a;
-                a = b;
-                b = a;
+                return true;
             }
         }
-        
-        while(c > a && c > b)
-        {
-            if(b > a)
-            {
-                temp = a;
-                a = c;
-                c = a;
-            }
-            else
-            {
-                temp = a;
-                a = c;
-                c = b;
-                b = a;
-            }
-        }
-        return (a, b, c); */
-
+        return true;
     }
+}

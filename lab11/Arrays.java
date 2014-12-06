@@ -45,11 +45,9 @@ public class Arrays
         }
         System.out.println("The sum is "+sum);
         
-        int[] reverseList = new int[myList.length];
-        for(int i = 0, j = myList.length - 1; i < myList.length; i++, j--)
+        for(int i = 0, j = myList.length-1; i < myList.length; i++, j--)
         {
-            reverseList[j] = myList[i];
-            System.out.println(myList[i]+"   "+reverseList[i]);
+            System.out.println(myList[i]+"   "+myList[j]);
         }
 
     }

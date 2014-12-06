@@ -33,42 +33,13 @@ public class RaggedArrays
             System.out.println();
         }
         
-        System.out.println("The array after sorting");
-        for(int i = 0; i < myArray.length - 1; i++)
+        Array array = new Array();
+        for(int i = 0; i < myArray.length; i++)
         {
-            for(int j = 0; j < myArray[i].length - 1; j++)
-            {
-                double currentMin = myArray[i][j];
-                int currentMinRowIndex = i;
-                int currentMinColIndex = j;
-            }
-            
-            for(int k = i + 1; k < myArray.length; k++)
-            {
-                for(int n = j + 1; n < myArray[i].length; n++)
-                {
-                    if(currentMin > myArray[k][n])
-                    {
-                        currentMin = myArray[k][n];
-                        currentMinRowIndex = k;
-                        currentMinColIndex = n;
-                    }
-                }
-            }
-            
-            if(currentMinIndex != i)
-            {
-                myArray[currentMinIndex][] = myArray[i][];
-                myArray[i] = currentMin;
-            }
-            for(int row = 0; row < myArray.length; row++)
-            {
-                for(int column = 0; column < myArray[row].length; column++)
-                {
-                    System.out.print(myArray[row][column] + " ");
-                }
-                System.out.println();
-            }
+            array.sort(myArray[i]);
+            System.out.println(myArray[i]);
         }
+        
+        
     }
 }
